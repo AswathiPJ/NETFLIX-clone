@@ -17,9 +17,11 @@ function Banner() {
     axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((response)=>{
       
 
-      setMovie(response.data.results[7])
+     //setMovie(response.data.results[Math.floor(Math.random()*response.data.results.length)])
+     setMovie(response.data.results[14])
     })
-  })
+    })
+  
   return (
     <div 
     style={{backgroundImage:`url(${movie? imageUrl+movie.backdrop_path :""})`}}
